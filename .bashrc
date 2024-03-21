@@ -109,12 +109,14 @@ alias xcopy='xclip -selection clipboard'
 alias medgeL='synclient AreaLeftEdge=150'
 alias medgeR='synclient AreaRightEdge=1700'
 alias gp='gpointing-device-settings'
+alias gitpy='python ~/projects/python3/gitpy.py'
 
 
 ##########################
 #####  NODE & NPM  #######
 ##########################
 export PATH=~/.npm-global/bin:$PATH
+alias vite='npm create vite@latest'
 #eval "$(starship init bash)"
 
 
@@ -155,3 +157,8 @@ fi
 # bun
 export BUN_INSTALL="$HOME/.bun"
 export PATH=$BUN_INSTALL/bin:$PATH
+eval "$(zoxide init bash)"
+
+# tabtab source for electron-forge package
+# uninstall by removing these lines or running `tabtab uninstall electron-forge`
+[ -f /home/praneethp/projects/node/node_and_express/test_electron_app/my_app/node_modules/tabtab/.completions/electron-forge.bash ] && . /home/praneethp/projects/node/node_and_express/test_electron_app/my_app/node_modules/tabtab/.completions/electron-forge.bash
