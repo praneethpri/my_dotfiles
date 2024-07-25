@@ -92,9 +92,10 @@ _open_files_for_editing() {
 ##########################
 ######   ALIASES  ########
 ##########################
-alias ..='cd ..'
-alias ...='cd ../..'
-alias ~='cd ~'
+alias ..='z ..'
+alias ...='z ../..'
+alias ~='z ~'
+alias cd='z'
 alias cls='clear'
 alias r='ranger'
 alias escl="xmodmap -e 'clear lock'"
@@ -109,7 +110,10 @@ alias xcopy='xclip -selection clipboard'
 alias medgeL='synclient AreaLeftEdge=150'
 alias medgeR='synclient AreaRightEdge=1700'
 alias gp='gpointing-device-settings'
-alias gitpy='python ~/projects/python3/gitpy.py'
+alias gitpy='python ~/projects/python3/gitpy/gitpy.py'
+alias readme='touch README.md'
+alias logout='pkill -KILL -u praneethp'
+alias sxiv='~/projects/Bash/sxiv-script/./sxiv-script.sh'
 
 
 ##########################
@@ -154,6 +158,10 @@ if [ -f /home/praneethp/.config/synth-shell/better-history.sh ] && [ -n "$( echo
 	source /home/praneethp/.config/synth-shell/better-history.sh
 fi
 
+################################
+#     ***  AUTOSTART  ***      #
+################################
+
 # bun
 export BUN_INSTALL="$HOME/.bun"
 export PATH=$BUN_INSTALL/bin:$PATH
@@ -162,3 +170,4 @@ eval "$(zoxide init bash)"
 # tabtab source for electron-forge package
 # uninstall by removing these lines or running `tabtab uninstall electron-forge`
 [ -f /home/praneethp/projects/node/node_and_express/test_electron_app/my_app/node_modules/tabtab/.completions/electron-forge.bash ] && . /home/praneethp/projects/node/node_and_express/test_electron_app/my_app/node_modules/tabtab/.completions/electron-forge.bash
+
